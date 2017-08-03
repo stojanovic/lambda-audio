@@ -56,24 +56,24 @@ With `lambda-sox` you can do that by passing the command as a string, just witho
 
 ```javascript
 lambdaSox.sox('./input.mp3 -c 1 /tmp/output.wav')
-	.then(response => {
-      // Do something when the file was converted
-	})
-    .catch(errorResponse => {
-      console.log('Error from the sox command:', errorResponse)
-    })
+  .then(response => {
+    // Do something when the file was converted
+  })
+  .catch(errorResponse => {
+    console.log('Error from the sox command:', errorResponse)
+  })
 ```
 
 Or by passing the arguments as an array:
 
 ```javascript
 lambdaSox.sox(['./input.mp3', '-c', '1', '/tmp/output.wav'])
-	.then(response => {
-      // Do something when the file was converted
-	})
-    .catch(errorResponse => {
-      console.log('Error from the sox command:', errorResponse)
-    })
+  .then(response => {
+    // Do something when the file was converted
+  })
+  .catch(errorResponse => {
+    console.log('Error from the sox command:', errorResponse)
+  })
 ```
 
 Keep in mind that AWS Lambda is read only and that the output path needs to be in /tmp folder.
@@ -92,24 +92,24 @@ With `lambda-sox` you can do that by passing the command as a string:
 
 ```javascript
 lambdaSox.soxi('./input.mp3')
-	.then(response => {
-      // Do something with the info
-	})
-    .catch(errorResponse => {
-      console.log('Error from the soxi command:', errorResponse)
-    })
+  .then(response => {
+    // Do something with the info
+  })
+  .catch(errorResponse => {
+    console.log('Error from the soxi command:', errorResponse)
+  })
 ```
 
 Or by passing the arguments as an array:
 
 ```javascript
 lambdaSox.soxi(['./input.mp3'])
-	.then(response => {
-      // Do something with the info
-	})
-    .catch(errorResponse => {
-      console.log('Error from the soxi command:', errorResponse)
-    })
+  .then(response => {
+    // Do something with the info
+  })
+  .catch(errorResponse => {
+    console.log('Error from the soxi command:', errorResponse)
+  })
 ```
 
 For the full list of options, visit [soxi documentation](http://sox.sourceforge.net/soxi.html).
@@ -126,24 +126,28 @@ With `lambda-sox` you can do that by passing the command as a string:
 
 ```javascript
 lambdaSox.lame('-b 64 ./input.mp3 /tmp/output.mp3')
-	.then(response => {
-      // Do something with the new mp3 file
-	})
-    .catch(errorResponse => {
-      console.log('Error from the lame command:', errorResponse)
-    })
+  .then(response => {
+    // Do something with the new mp3 file
+  })
+  .catch(errorResponse => {
+    console.log('Error from the lame command:', errorResponse)
+  })
 ```
 
 Or by passing the arguments as an array:
 
 ```javascript
 lambdaSox.lame(['-b', '64', './input.mp3', '/tmp/output.mp3'])
-	.then(response => {
-      // Do something with the new mp3 file
-	})
-    .catch(errorResponse => {
-      console.log('Error from the lame command:', errorResponse)
-    })
+  .then(response => {
+    // Do something with the new mp3 file
+  })
+  .catch(errorResponse => {
+    console.log('Error from the lame command:', errorResponse)
+  })
 ```
 
 For the full list of options, visit [lame documentation](http://lame.cvs.sourceforge.net/viewvc/lame/lame/USAGE).
+
+## License
+
+MIT -- see [LICENSE](LICENSE)
