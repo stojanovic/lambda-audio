@@ -44,7 +44,7 @@ Each function is returning promise that will resolve when the command is success
 
 See below for the examples.
 
-#### sox
+#### sox command
 
 Let's say that you want to convert input.mp3 file to mono, and output it as output.wav file, in command line you would do that like this: 
 
@@ -80,7 +80,7 @@ Keep in mind that AWS Lambda is read only and that the output path needs to be i
 
 For the full list of options, visit [sox documentation](http://sox.sourceforge.net/soxformat.html).
 
-#### soxi
+#### soxi command
 
 Let's say that you want to see the info about input.mp3 file, in command line you would do that like this: 
 
@@ -114,7 +114,7 @@ lambdaSox.soxi(['./input.mp3'])
 
 For the full list of options, visit [soxi documentation](http://sox.sourceforge.net/soxi.html).
 
-#### lame
+#### lame command
 
 Let's say you want to re-encode existing MP3 to 64 kbps MP3, in command line you would do it like this:
 
@@ -147,6 +147,16 @@ lambdaSox.lame(['-b', '64', './input.mp3', '/tmp/output.mp3'])
 ```
 
 For the full list of options, visit [lame documentation](http://lame.cvs.sourceforge.net/viewvc/lame/lame/USAGE).
+
+### Deployment
+
+`lambda-sox` is working perfectly with [Claudia.js](https://claudiajs.com) library, but you can use it with other AWS Libraries and frameworks too.
+
+With Claudia.js, simply save `lambda-sox` as a dependency and then you can deploy your AWS Lambda function using standard `claudia create` command.
+
+### Testing
+
+TBA
 
 ## License
 
