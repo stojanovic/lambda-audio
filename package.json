@@ -1,0 +1,24 @@
+{
+  "name": "lambda-sox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "pretest": "eslint lib spec *.js",
+    "test": "node spec/support/jasmine-runner.js",
+    "debug": "node debug spec/support/jasmine-runner.js"
+  },
+  "author": "Slobodan Stojanovic <slobodan@cloudhorizon.com> (http://slobodan.me/)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-defaults": "^9.0.0"
+  },
+  "dependencies": {
+    "claudia": "^2.14.2",
+    "eslint-plugin-react": "^7.1.0"
+  }
+}
