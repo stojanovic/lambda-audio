@@ -1,7 +1,7 @@
 {
   "name": "lambda-sox",
   "version": "1.0.0",
-  "description": "",
+  "description": "Run Sound eXchange (SoX), the Swiss Army knife of audio manipulation, with Lame on AWS Lambda.",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -16,9 +16,5 @@
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-defaults": "^9.0.0"
-  },
-  "dependencies": {
-    "claudia": "^2.14.2",
-    "eslint-plugin-react": "^7.1.0"
   }
 }
