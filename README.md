@@ -46,7 +46,7 @@ See below for the examples.
 
 #### sox command
 
-Let's say that you want to convert input.mp3 file to mono, and output it as output.wav file, in command line you would do that like this: 
+Let's say that you want to convert input.mp3 file to mono, and output it as output.wav file, in command line you would do that like this:
 
 ```shell
 sox input.mp3 -c 1 output.wav
@@ -82,7 +82,7 @@ For the full list of options, visit [sox documentation](http://sox.sourceforge.n
 
 #### soxi command
 
-Let's say that you want to see the info about input.mp3 file, in command line you would do that like this: 
+Let's say that you want to see the info about input.mp3 file, in command line you would do that like this:
 
 ```shell
 soxi input.mp3
@@ -160,4 +160,4 @@ TBA
 
 ## License
 
-MIT -- see [LICENSE](LICENSE)
+GNU GENERAL PUBLIC LICENSE, Version 2 -- see [LICENSE](LICENSE)
