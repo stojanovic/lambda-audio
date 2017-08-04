@@ -4,11 +4,11 @@ Run Sound eXchange (SoX), the Swiss Army knife of audio manipulation, with Lame 
 
 ## What
 
-`lambda-sox` is static binary of [sox](http://sox.sourceforge.net) utility, built for AWS Lambda. It supports `sox`, `soxi` and `lame` commands.
+`lambda-audio` is static binary of [sox](http://sox.sourceforge.net) utility, built for AWS Lambda. It supports `sox`, `soxi` and `lame` commands.
 
 ## Why
 
-`lambda-sox` allows you to covert and merge multiple audio files using AWS Lambda.
+`lambda-audio` allows you to covert and merge multiple audio files using AWS Lambda.
 
 You can use it as a replacement/cheaper version of [Amazon Elastic Transcoder](https://aws.amazon.com/elastictranscoder/). Or you can use it for the workflows that are not currently possible on Elastic Transcoder.
 
@@ -21,7 +21,7 @@ Motivation behind this library was a use case where we had up to five audio file
 You can install this package from NPM by running following command:
 
 ```shell
-npm install lambda-sox --save
+npm install lambda-audio --save
 ```
 
 ### Usage
@@ -29,10 +29,10 @@ npm install lambda-sox --save
 After you require node module in your code by adding:
 
 ```javascript
-const lambdaSox = require('lambda-sox')
+const lambdaAudio = require('lambda-audio')
 ```
 
-`lambdaSox` will contain three functions:
+`lambdaAudio` will contain three functions:
 
 - sox
 - soxi
@@ -52,10 +52,10 @@ Let's say that you want to convert input.mp3 file to mono, and output it as outp
 sox input.mp3 -c 1 output.wav
 ```
 
-With `lambda-sox` you can do that by passing the command as a string, just without `sox`	part, like this:
+With `lambda-audio` you can do that by passing the command as a string, just without `sox`	part, like this:
 
 ```javascript
-lambdaSox.sox('./input.mp3 -c 1 /tmp/output.wav')
+lambdaAudio.sox('./input.mp3 -c 1 /tmp/output.wav')
   .then(response => {
     // Do something when the file was converted
   })
@@ -67,7 +67,7 @@ lambdaSox.sox('./input.mp3 -c 1 /tmp/output.wav')
 Or by passing the arguments as an array:
 
 ```javascript
-lambdaSox.sox(['./input.mp3', '-c', '1', '/tmp/output.wav'])
+lambdaAudio.sox(['./input.mp3', '-c', '1', '/tmp/output.wav'])
   .then(response => {
     // Do something when the file was converted
   })
@@ -88,10 +88,10 @@ Let's say that you want to see the info about input.mp3 file, in command line yo
 soxi input.mp3
 ```
 
-With `lambda-sox` you can do that by passing the command as a string:
+With `lambda-audio` you can do that by passing the command as a string:
 
 ```javascript
-lambdaSox.soxi('./input.mp3')
+lambdaAudio.soxi('./input.mp3')
   .then(response => {
     // Do something with the info
   })
@@ -103,7 +103,7 @@ lambdaSox.soxi('./input.mp3')
 Or by passing the arguments as an array:
 
 ```javascript
-lambdaSox.soxi(['./input.mp3'])
+lambdaAudio.soxi(['./input.mp3'])
   .then(response => {
     // Do something with the info
   })
@@ -122,10 +122,10 @@ Let's say you want to re-encode existing MP3 to 64 kbps MP3, in command line you
 lame -b 64 input.mp3 output.mp3
 ```
 
-With `lambda-sox` you can do that by passing the command as a string:
+With `lambda-audio` you can do that by passing the command as a string:
 
 ```javascript
-lambdaSox.lame('-b 64 ./input.mp3 /tmp/output.mp3')
+lambdaAudio.lame('-b 64 ./input.mp3 /tmp/output.mp3')
   .then(response => {
     // Do something with the new mp3 file
   })
@@ -137,7 +137,7 @@ lambdaSox.lame('-b 64 ./input.mp3 /tmp/output.mp3')
 Or by passing the arguments as an array:
 
 ```javascript
-lambdaSox.lame(['-b', '64', './input.mp3', '/tmp/output.mp3'])
+lambdaAudio.lame(['-b', '64', './input.mp3', '/tmp/output.mp3'])
   .then(response => {
     // Do something with the new mp3 file
   })
@@ -150,9 +150,9 @@ For the full list of options, visit [lame documentation](http://lame.cvs.sourcef
 
 ### Deployment
 
-`lambda-sox` is working perfectly with [Claudia.js](https://claudiajs.com) library, but you can use it with other AWS Libraries and frameworks too.
+`lambda-audio` is working perfectly with [Claudia.js](https://claudiajs.com) library, but you can use it with other AWS Libraries and frameworks too.
 
-With Claudia.js, simply save `lambda-sox` as a dependency and then you can deploy your AWS Lambda function using standard `claudia create` command.
+With Claudia.js, simply save `lambda-audio` as a dependency and then you can deploy your AWS Lambda function using standard `claudia create` command.
 
 ### Testing
 

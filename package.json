@@ -1,5 +1,5 @@
 {
-  "name": "lambda-sox",
+  "name": "lambda-audio",
   "version": "1.0.0",
   "description": "Run Sound eXchange (SoX), the Swiss Army knife of audio manipulation, with Lame on AWS Lambda.",
   "main": "index.js",

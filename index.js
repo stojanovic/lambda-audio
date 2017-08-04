@@ -1,3 +1,3 @@
-const lambdaSox = require('./lib/lambda-sox')
+const lambdaAudio = require('./lib/lambda-audio')
 
-module.exports = lambdaSox
+module.exports = lambdaAudio
