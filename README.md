@@ -174,6 +174,7 @@ Get detailed hierarchical test name reporting:
 
 ```bash
 npm test -- full
+```
 
 ## License
 
