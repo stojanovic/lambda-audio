@@ -8,13 +8,15 @@
   },
   "scripts": {
     "pretest": "eslint lib spec *.js",
-    "test": "node spec/support/jasmine-runner.js",
-    "debug": "node debug spec/support/jasmine-runner.js"
+    "test": "NODE_ENV=test node spec/support/jasmine-runner.js",
+    "debug": "NODE_ENV=test node debug spec/support/jasmine-runner.js"
   },
   "author": "Slobodan Stojanovic <slobodan@cloudhorizon.com> (http://slobodan.me/)",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-defaults": "^9.0.0"
+    "eslint-config-defaults": "^9.0.0",
+    "jasmine": "^2.7.0",
+    "jasmine-spec-reporter": "^4.1.1"
   }
 }

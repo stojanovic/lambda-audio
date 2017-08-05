@@ -156,7 +156,24 @@ With Claudia.js, simply save `lambda-audio` as a dependency and then you can dep
 
 ### Testing
 
-TBA
+We use [Jasmine](https://jasmine.github.io/) for unit and integration tests. Unless there is a very compelling reason to use something different, please continue using Jasmine for tests. The existing tests are in the [spec](spec) folder. Here are some useful command shortcuts:
+
+Run all the tests:
+
+```bash
+npm test
+```
+
+Run only some tests:
+
+```bash
+npm test -- filter=prefix
+```
+
+Get detailed hierarchical test name reporting:
+
+```bash
+npm test -- full
 
 ## License
 
